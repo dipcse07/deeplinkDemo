@@ -19,6 +19,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpT-3s-QaV">
                                 <rect key="frame" x="153" y="433" width="108" height="30"/>
                                 <state key="normal" title="GoToOtherPage"/>
+                                <connections>
+                                    <segue destination="RPt-aO-4Wy" kind="show" id="y8W-Bo-Kbp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -29,9 +32,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="aTY-Oc-VM6"/>
-                    <connections>
-                        <segue destination="RPt-aO-4Wy" kind="show" id="jbt-a2-nI2"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,6 +65,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Inner" id="7to-M3-5g5"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="nv6-qP-IDy" id="Hve-aG-wlf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M4N-1U-8Gq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,10 +9,15 @@ import UIKit
 
 class InnerPageViewController: UIViewController {
 
+    var message: String?
+    @IBOutlet weak var messageLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        messageLabel.text = message ?? ""
     }
     
 
