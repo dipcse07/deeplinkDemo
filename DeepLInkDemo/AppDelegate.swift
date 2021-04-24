@@ -22,34 +22,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //open this url bellow from safari or from xc command line:
         // sdl://host/inner?message=themessage
         // xcrun simctl openurl booted sdl://host/inner?message=themessage
-        
         print("url \(url)")
         print("url host :\(url.host!)")
         print("url path :\(url.path)")
         let urlPath  = url.path
         let urlHost  = url.host ?? ""
-        
-        //            if(urlHost != "somedomain.com")
-        //            {
-        //                print("Host is not correct")
-        //                return false
-        //            }
-        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let rootNavController: UINavigationController!
+        rootNavController = UINavigationController(rootViewController: UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "home"))
         if(urlPath == "/inner"){
-            let rootNavController: UINavigationController!
-            rootNavController = UINavigationController(rootViewController: UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "home"))
-            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let innerPage = mainStoryboard.instantiateViewController(withIdentifier: "InnerPageViewController") as! InnerPageViewController
             let urlComponent = URLComponents(url: url, resolvingAgainstBaseURL: true)
             innerPage.message = urlComponent?.queryItems?.first?.value ?? ""
             rootNavController.pushViewController(innerPage, animated: true)
-            self.window?.rootViewController = rootNavController
-        } else if (urlPath == "/about"){
-            
+        } else if (urlPath == "/image"){
+            let imagePage = mainStoryboard.instantiateViewController(withIdentifier: "imageVC") as! imageVC
+            let urlComponent = URLComponents(url: url, resolvingAgainstBaseURL: true)
+            imagePage.message = urlComponent?.queryItems?.first?.value ?? ""
+            rootNavController.pushViewController(imagePage, animated: true)
         }
+        self.window?.rootViewController = rootNavController
         self.window?.makeKeyAndVisible()
         return true
     }
     
 }
+
 

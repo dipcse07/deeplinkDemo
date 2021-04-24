@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E6613D526345DE100A417C2 /* InnerPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6613D426345DE100A417C2 /* InnerPageViewController.swift */; };
+		3E6613D9263486A000A417C2 /* imageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6613D8263486A000A417C2 /* imageVC.swift */; };
 		3EC5A18A26343A42003FEF55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC5A18926343A42003FEF55 /* AppDelegate.swift */; };
 		3EC5A18E26343A42003FEF55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC5A18D26343A42003FEF55 /* ViewController.swift */; };
 		3EC5A19126343A42003FEF55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EC5A18F26343A42003FEF55 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		3E6613D426345DE100A417C2 /* InnerPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerPageViewController.swift; sourceTree = "<group>"; };
+		3E6613D8263486A000A417C2 /* imageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageVC.swift; sourceTree = "<group>"; };
 		3EC5A18626343A42003FEF55 /* DeepLInkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepLInkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EC5A18926343A42003FEF55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EC5A18D26343A42003FEF55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				3EC5A19426343A48003FEF55 /* LaunchScreen.storyboard */,
 				3EC5A19726343A48003FEF55 /* Info.plist */,
 				3E6613D426345DE100A417C2 /* InnerPageViewController.swift */,
+				3E6613D8263486A000A417C2 /* imageVC.swift */,
 			);
 			path = DeepLInkDemo;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E6613D9263486A000A417C2 /* imageVC.swift in Sources */,
 				3EC5A18E26343A42003FEF55 /* ViewController.swift in Sources */,
 				3EC5A18A26343A42003FEF55 /* AppDelegate.swift in Sources */,
 				3E6613D526345DE100A417C2 /* InnerPageViewController.swift in Sources */,
