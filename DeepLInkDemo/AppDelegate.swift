@@ -46,6 +46,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        print("url \(url)")
+        print("url host :\(url.host!)")
+        print("url path :\(url.path)")
+        let urlPath  = url.path
+        let urlHost  = url.host ?? ""
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let rootNavController: UINavigationController!
+        rootNavController = UINavigationController(rootViewController: UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "home"))
+        if(urlPath == "/inner"){
+            let innerPage = mainStoryboard.instantiateViewController(withIdentifier: "InnerPageViewController") as! InnerPageViewController
+            let urlComponent = URLComponents(url: url, resolvingAgainstBaseURL: true)
+            innerPage.message = urlComponent?.queryItems?.first?.value ?? ""
+            rootNavController.pushViewController(innerPage, animated: true)
+        } else if (urlPath == "/image"){
+            let imagePage = mainStoryboard.instantiateViewController(withIdentifier: "imageVC") as! imageVC
+            let urlComponent = URLComponents(url: url, resolvingAgainstBaseURL: true)
+            imagePage.message = urlComponent?.queryItems?.first?.value ?? ""
+            rootNavController.pushViewController(imagePage, animated: true)
+        }
+        self.window?.rootViewController = rootNavController
+        self.window?.makeKeyAndVisible()
+        return true
+    }
+    
 }
 
 
